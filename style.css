@@ -1110,3 +1110,163 @@ nav a {
 
 
 }
+/* =========================================
+FORMULÁRIO DE CAPTAÇÃO DE LEADS
+========================================= */
+
+.formulario-lead {
+padding: 70px 20px;
+background: #0e7a48dc;
+}
+
+.formulario-container {
+max-width: 1000px;
+margin: 0 auto;
+
+```
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+
+background: #ffffff;
+padding: 45px;
+
+border-radius: 20px;
+
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+```
+
+}
+
+.formulario-texto h2 {
+margin-top: 0;
+font-size: 32px;
+}
+
+.formulario-texto p {
+font-size: 17px;
+line-height: 1.7;
+color: #080808;
+}
+
+/* CAMPOS */
+
+.campo {
+margin-bottom: 18px;
+}
+
+.campo label {
+display: block;
+margin-bottom: 7px;
+
+```
+font-weight: 600;
+```
+
+}
+
+.campo input,
+.campo select {
+
+```
+width: 100%;
+
+padding: 14px 15px;
+
+border: 1px solid #d5d5d5;
+
+border-radius: 10px;
+
+font-size: 16px;
+
+box-sizing: border-box;
+
+outline: none;
+
+transition: 0.2s;
+```
+
+}
+
+.campo input:focus,
+.campo select:focus {
+
+```
+border-color: #25d366;
+
+box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12);
+```
+
+}
+
+/* BOTÃO */
+
+.btn-formulario {
+
+```
+width: 100%;
+
+border: none;
+
+padding: 15px 20px;
+
+border-radius: 10px;
+
+background: #25d366;
+
+color: #ffffff;
+
+font-size: 16px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.3s;
+```
+
+}
+
+.btn-formulario:hover {
+
+```
+background: #1ebe5d;
+
+transform: translateY(-2px);
+```
+
+}
+
+.formulario-obrigatorio {
+
+```
+margin-top: 12px;
+
+font-size: 13px;
+
+color: #777;
+```
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+```
+.formulario-container {
+
+    grid-template-columns: 1fr;
+
+    padding: 30px 22px;
+
+    gap: 30px;
+}
+
+.formulario-texto h2 {
+
+    font-size: 26px;
+}
+```
+
+}

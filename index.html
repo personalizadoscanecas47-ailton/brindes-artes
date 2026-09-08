@@ -244,44 +244,259 @@
 
 </div>
 
-</section> <!-- CONTATO --> <footer id="contato">
+<!-- FORMULÁRIO DE CAPTAÇÃO DE LEADS -->
+
+<section id="orcamento" class="formulario-lead">
+
+```
+<div class="formulario-container">
+
+    <div class="formulario-texto">
+
+        <h2>🎁 Encontre o brinde ideal para você</h2>
+
+        <p>
+            Está procurando brindes personalizados para sua empresa,
+            evento, festa ou presente?
+        </p>
+
+        <p>
+            Preencha seus dados e conte para nós qual produto você
+            procura. Entraremos em contato para apresentar as melhores
+            opções para você.
+        </p>
+
+    </div>
+
+    <form id="leadForm">
+
+        <div class="campo">
+
+            <label for="nome">
+                Nome completo *
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="email">
+                E-mail *
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seuemail@exemplo.com"
+                required>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="telefone">
+                Telefone / WhatsApp *
+            </label>
+
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(19) 99999-9999"
+                required>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="cidade">
+                Cidade *
+            </label>
+
+            <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Digite sua cidade"
+                required>
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="produto">
+                Qual brinde personalizado você procura? *
+            </label>
+
+            <select
+                id="produto"
+                name="produto"
+                required>
+
+                <option value="">
+                    Selecione uma opção
+                </option>
+
+                <option value="Canecas">
+                    Canecas
+                </option>
+
+                <option value="Azulejos">
+                    Azulejos
+                </option>
+
+                <option value="Squeeze / Garrafinhas">
+                    Squeeze / Garrafinhas
+                </option>
+
+                <option value="Chaveiro Acrílico">
+                    Chaveiro Acrílico
+                </option>
+
+                <option value="Chaveiro MDF">
+                    Chaveiro MDF
+                </option>
+
+                <option value="Chaveiro Plástico">
+                    Chaveiro Plástico
+                </option>
+
+                <option value="Cordão para Chaveiro">
+                    Cordão para Chaveiro
+                </option>
+
+                <option value="Ainda não decidi">
+                    Ainda não decidi
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="btn-formulario">
+
+            Quero receber informações
+
+        </button>
+
+        <p class="formulario-obrigatorio">
+            * Campos obrigatórios
+        </p>
+
+    </form>
+
+</div>
+```
+
+</section>
+
+<!-- CONTATO -->
+
+<footer id="contato">
+
+```
 <h2>Contato</h2>
 
 <p>
     📱 WhatsApp:
-    <a href="https://wa.me/5519989258023"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a
+        href="https://wa.me/5519989258023"
+        target="_blank"
+        rel="noopener noreferrer">
+
         (19) 98925-8023
+
     </a>
 </p>
 
 <p>
     📧 personalizadoscanecas47@gmail.com
 </p>
-<!-- Alteração rede social -->
 
- <div>
-            <h3>Redes sociais</h3>
 
-            <a href="https://www.instagram.com/personalizadoscanecas47/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="social">
-                📸 Instagram
-            </a>
-        </div>
+<div>
 
+    <h3>Redes sociais</h3>
+
+    <a
+        href="https://www.instagram.com/personalizadoscanecas47/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social">
+
+        📸 Instagram
+
+    </a>
+
+</div>
 
 
 <p>
     © 2026 Arte Personalizados
 </p>
+```
 
-</footer> <!-- BOTÃO FLUTUANTE WHATSAPP -->
+</footer>
 
-<a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos%20personalizados." target="_blank" rel="noopener noreferrer" class="whatsapp-flutuante" aria-label="Falar pelo WhatsApp">
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
 
+<a
+ href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos%20personalizados."
+ target="_blank"
+ rel="noopener noreferrer"
+ class="whatsapp-flutuante"
+ aria-label="Falar pelo WhatsApp">
+
+```
 💬
+```
 
-</a> </body> </html>
+</a>
+
+<script>
+
+document.getElementById("leadForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const telefone = document.getElementById("telefone").value;
+    const cidade = document.getElementById("cidade").value;
+    const produto = document.getElementById("produto").value;
+
+
+    const mensagem =
+        "Olá! Tenho interesse em brindes personalizados.%0A%0A" +
+        "Nome: " + encodeURIComponent(nome) + "%0A" +
+        "E-mail: " + encodeURIComponent(email) + "%0A" +
+        "Telefone: " + encodeURIComponent(telefone) + "%0A" +
+        "Cidade: " + encodeURIComponent(cidade) + "%0A" +
+        "Produto de interesse: " + encodeURIComponent(produto);
+
+
+    const whatsapp =
+        "https://wa.me/5519989258023?text=" + mensagem;
+
+
+    window.open(whatsapp, "_blank");
+
+});
+
+</script>
+
