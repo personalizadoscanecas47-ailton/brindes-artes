@@ -1,502 +1,438 @@
-<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arte Personalizados</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arte Personalizados — Canecas, squeezes, azulejos e chaveiros personalizados com carinho e qualidade para todas as ocasiões.">
+    <title>Arte Personalizados — Presentes e Brindes Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-</head> <body> <header>
-<div class="logo-area">
+<body>
+    <!-- LINK PARA PULAR PARA O CONTEÚDO PRINCIPAL (ACESSIBILIDADE VIA TECLADO) -->
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-    <img src="img/logo.jpg"
-         alt="Logo da Arte Personalizados"
-         class="logo">
+    <!-- CABEÇALHO -->
+    <header role="banner">
+        <div class="logo-area">
+            <img src="img/logo.jpg" alt="Logo da Arte Personalizados" class="logo" width="90" height="90">
+            <div>
+                <h1>Arte Personalizados</h1>
+                <p>Presentes personalizados para todas as ocasiões</p>
+            </div>
+        </div>
 
-    <div>
-        <h1>Arte Personalizados</h1>
-        <p>Presentes personalizados para todas as ocasiões</p>
-    </div>
+        <nav aria-label="Navegação principal">
+            <a href="#sobre">Sobre</a>
+            <a href="#canecas">Canecas</a>
+            <a href="#squeeze">Squeeze</a>
+            <a href="#azulejo">Azulejo</a>
+            <a href="#chaveiro">Chaveiro</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-</div>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
 
-<nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#canecas">Canecas</a>
-    <a href="#squeeze">Squeeze</a>
-    <a href="#azulejo">Azulejo</a>
-    <a href="#chaveiro">Chaveiro</a>
-    <a href="#contato">Contato</a>
-</nav>
+        <!-- HERO -->
+        <section class="hero" aria-label="Destaque principal">
+            <div class="hero-text">
+                <h2>
+                    Transforme momentos especiais em presentes únicos
+                </h2>
+                <p>
+                    Canecas, squeezes, azulejos e chaveiros personalizados feitos especialmente para você.
+                </p>
+                <a href="#canecas" class="btn-destaque">
+                    Personalize agora
+                </a>
+            </div>
 
-</header> <!-- HERO --> <section class="hero">
-<div class="hero-text">
+            <div class="hero-img">
+                <img src="img/caneca branca.png" alt="Caneca branca personalizada com arte exclusiva" width="380" height="380">
+            </div>
+        </section>
 
-    <h2>
-        Transforme momentos especiais
-        em presentes únicos
-    </h2>
+        <!-- SOBRE -->
+        <section id="sobre" class="sobre" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Sobre</h2>
+            <p>
+                Trabalhamos com produtos personalizados feitos com qualidade,
+                criatividade e carinho para presentear pessoas especiais.
+            </p>
+        </section>
 
-    <p>
-        Canecas, squeezes, azulejos e chaveiros
-        personalizados feitos especialmente para você.
-    </p>
+        <!-- BENEFÍCIOS -->
+        <section class="beneficios" aria-labelledby="titulo-beneficios">
+            <h2 id="titulo-beneficios">
+                Por que escolher a Arte Personalizados?
+            </h2>
 
-    <a href="#canecas" class="btn-destaque">
-        Personalize agora
-    </a>
+            <div class="beneficio-box">
+                <div>
+                    <h3><span aria-hidden="true">✨</span> Qualidade</h3>
+                    <p>
+                        Produtos feitos com materiais selecionados.
+                    </p>
+                </div>
 
-</div>
+                <div>
+                    <h3><span aria-hidden="true">🎨</span> Personalização</h3>
+                    <p>
+                        Criações exclusivas para cada cliente.
+                    </p>
+                </div>
 
-<div class="hero-img">
+                <div>
+                    <h3><span aria-hidden="true">🚚</span> Rapidez</h3>
+                    <p>
+                        Produção cuidadosa e entrega eficiente.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <img src="img/caneca-325ml-ceramica.png"
-         alt="Caneca personalizada">
+        <!-- CANECAS -->
+        <section id="canecas" aria-labelledby="titulo-canecas">
+            <h2 id="titulo-canecas">Canecas</h2>
 
-</div>
+            <div class="produtos">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/canecas 325ml.jpg" alt="Caneca Cerâmica Personalizada 325 ml" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Caneca Cerâmica</h3>
+                        <p>325 ml</p>
+                        <a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20uma%20Caneca%20Cerâmica%20325ml."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-comprar"
+                           aria-label="Comprar Caneca Cerâmica 325ml pelo WhatsApp (abre em nova aba)">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
 
-</section> <!-- SOBRE --> <section id="sobre" class="sobre">
-<h2>Sobre</h2>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/caneca colorida.png" alt="Caneca Colorida Personalizada 325 ml" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Caneca Colorida</h3>
+                        <p>325 ml</p>
+                        <a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20uma%20Caneca%20Colorida%20325ml."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-comprar"
+                           aria-label="Comprar Caneca Colorida 325ml pelo WhatsApp (abre em nova aba)">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<p>
-    Trabalhamos com produtos personalizados feitos com qualidade,
-    criatividade e carinho para presentear pessoas especiais.
-</p>
+        <!-- SQUEEZE -->
+        <section id="squeeze" aria-labelledby="titulo-squeeze">
+            <h2 id="titulo-squeeze">Squeeze</h2>
 
-</section> <!-- BENEFÍCIOS --> <section class="beneficios">
-<h2>
-    Por que escolher a Arte Personalizados?
-</h2>
+            <div class="produtos">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/squeeze aluminio.png" alt="Squeeze de Alumínio Personalizado 600 ml" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Squeeze Alumínio</h3>
+                        <p>600 ml</p>
+                        <a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Squeeze%20de%20Alumínio."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-comprar"
+                           aria-label="Comprar Squeeze de Alumínio pelo WhatsApp (abre em nova aba)">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="beneficio-box">
+        <!-- AZULEJO -->
+        <section id="azulejo" aria-labelledby="titulo-azulejo">
+            <h2 id="titulo-azulejo">Azulejo</h2>
 
-    <div>
-        <h3>✨ Qualidade</h3>
+            <div class="produtos">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/azulejo-20x20cm.png" alt="Azulejo Decorativo Personalizado 20 por 20 centímetros" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Azulejo Decorativo</h3>
+                        <p>20 x 20 cm</p>
+                        <a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Azulejo%20Decorativo%2020x20cm."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-comprar"
+                           aria-label="Comprar Azulejo Decorativo 20x20cm pelo WhatsApp (abre em nova aba)">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHAVEIRO -->
+        <section id="chaveiro" aria-labelledby="titulo-chaveiro">
+            <h2 id="titulo-chaveiro">Chaveiros</h2>
+
+            <div class="produtos">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="img/chaveiro-acrilico-3x4cm.png" alt="Chaveiro Acrílico Personalizado" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>Chaveiro Acrílico</h3>
+                        <p>Personalizado</p>
+                        <a href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Chaveiro%20Acrílico%20Personalizado."
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-comprar"
+                           aria-label="Comprar Chaveiro Acrílico pelo WhatsApp (abre em nova aba)">
+                            Comprar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CAPTAÇÃO DE LEADS -->
+        <section id="orcamento" class="formulario-lead" aria-labelledby="titulo-orcamento">
+            <div class="formulario-container">
+                <div class="formulario-texto">
+                    <h2 id="titulo-orcamento"><span aria-hidden="true">🎁</span> Encontre o brinde ideal para você</h2>
+                    <p>
+                        Está procurando brindes personalizados para sua empresa,
+                        evento, festa ou presente?
+                    </p>
+                    <p>
+                        Preencha seus dados e conte para nós qual produto você
+                        procura. Entraremos em contato para apresentar as melhores
+                        opções para você.
+                    </p>
+                </div>
+
+                <form id="leadForm">
+                    <div class="campo">
+                        <label for="nome">
+                            Nome completo <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">
+                            E-mail <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            autocomplete="email"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">
+                            Telefone / WhatsApp <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span>
+                        </label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(19) 99999-9999"
+                            autocomplete="tel"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidade">
+                            Cidade <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            placeholder="Digite sua cidade"
+                            autocomplete="address-level2"
+                            required
+                            aria-required="true">
+                    </div>
+
+                    <div class="campo">
+                        <label for="produto">
+                            Qual brinde personalizado você procura? <span aria-hidden="true">*</span><span class="sr-only">(obrigatório)</span>
+                        </label>
+                        <select
+                            id="produto"
+                            name="produto"
+                            required
+                            aria-required="true">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Canecas">Canecas</option>
+                            <option value="Azulejos">Azulejos</option>
+                            <option value="Squeeze / Garrafinhas">Squeeze / Garrafinhas</option>
+                            <option value="Chaveiro Acrílico">Chaveiro Acrílico</option>
+                            <option value="Chaveiro MDF">Chaveiro MDF</option>
+                            <option value="Chaveiro Plástico">Chaveiro Plástico</option>
+                            <option value="Cordão para Chaveiro">Cordão para Chaveiro</option>
+                            <option value="Ainda não decidi">Ainda não decidi</option>
+                        </select>
+                    </div>
+
+                    <!-- MENSAGEM DO CLIENTE -->
+                    <div class="campo">
+                        <label for="mensagem">
+                            Conte um pouco mais sobre o que você precisa
+                        </label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Ex.: Preciso de 50 canecas para uma empresa..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-formulario">
+                        Quero receber informações
+                    </button>
+
+                    <p class="formulario-obrigatorio">
+                        * Campos obrigatórios
+                    </p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTATO -->
+    <footer id="contato" role="contentinfo">
+        <h2>Contato</h2>
+
         <p>
-            Produtos feitos com materiais selecionados.
-        </p>
-    </div>
-
-    <div>
-        <h3>🎨 Personalização</h3>
-        <p>
-            Criações exclusivas para cada cliente.
-        </p>
-    </div>
-
-    <div>
-        <h3>🚚 Rapidez</h3>
-        <p>
-            Produção cuidadosa e entrega eficiente.
-        </p>
-    </div>
-
-</div>
-
-</section> <!-- CANECAS --> <section id="canecas">
-<h2>Canecas</h2>
-
-<div class="produtos">
-
-    <div class="card">
-
-        <div class="card-img">
-            <img src="img/caneca ceramica 325ml.png"
-                 alt="Caneca Cerâmica 325 ml">
-        </div>
-
-        <div class="card-conteudo">
-
-            <h3>Caneca Cerâmica</h3>
-
-            <p>325 ml</p>
-
-            <a
-                href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20uma%20Caneca%20Cerâmica%20325ml."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-comprar">
-                Comprar pelo WhatsApp
+            <span aria-hidden="true">📱</span> WhatsApp:
+            <a href="https://wa.me/5519989258023" target="_blank" rel="noopener noreferrer" aria-label="(19) 98925-8023 (abre no WhatsApp)">
+                (19) 98925-8023
             </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="card">
-
-        <div class="card-img">
-            <img src="img/caneca-325ml-colorida.png"
-                 alt="Caneca Colorida 325 ml">
-        </div>
-
-        <div class="card-conteudo">
-
-            <h3>Caneca Colorida</h3>
-
-            <p>325 ml</p>
-
-            <a
-                href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20uma%20Caneca%20Colorida%20325ml."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-comprar">
-                Comprar pelo WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section> <!-- SQUEEZE --> <section id="squeeze">
-<h2>Squeeze</h2>
-
-<div class="produtos">
-
-    <div class="card">
-
-        <div class="card-img">
-            <img src="img/squeeze-500ml.png"
-                 alt="Squeeze Alumínio">
-        </div>
-
-        <div class="card-conteudo">
-
-            <h3>Squeeze Alumínio</h3>
-
-            <p>600 ml</p>
-
-            <a
-                href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Squeeze%20de%20Alumínio."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-comprar">
-                Comprar pelo WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section> <!-- AZULEJO --> <section id="azulejo">
-<h2>Azulejo</h2>
-
-<div class="produtos">
-
-    <div class="card">
-
-        <div class="card-img">
-            <img src="img/azulejo-20x20cm.png"
-                 alt="Azulejo Decorativo 20x20 cm">
-        </div>
-
-        <div class="card-conteudo">
-
-            <h3>Azulejo Decorativo</h3>
-
-            <p>20 x 20 cm</p>
-
-            <a
-                href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Azulejo%20Decorativo%2020x20cm."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-comprar">
-                Comprar pelo WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section> <!-- CHAVEIRO --> <section id="chaveiro">
-<h2>Chaveiros</h2>
-
-<div class="produtos">
-
-    <div class="card">
-
-        <div class="card-img">
-            <img src="img/chaveiro-acrilico-3x4cm.png"
-                 alt="Chaveiro Acrílico Personalizado">
-        </div>
-
-        <div class="card-conteudo">
-
-            <h3>Chaveiro Acrílico</h3>
-
-            <p>Personalizado</p>
-
-            <a
-                href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20comprar%20um%20Chaveiro%20Acrílico%20Personalizado."
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-comprar">
-                Comprar pelo WhatsApp
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- FORMULÁRIO DE CAPTAÇÃO DE LEADS -->
-
-<section id="orcamento" class="formulario-lead">
-
-```
-<div class="formulario-container">
-
-    <div class="formulario-texto">
-
-        <h2>🎁 Encontre o brinde ideal para você</h2>
-
-        <p>
-            Está procurando brindes personalizados para sua empresa,
-            evento, festa ou presente?
         </p>
 
         <p>
-            Preencha seus dados e conte para nós qual produto você
-            procura. Entraremos em contato para apresentar as melhores
-            opções para você.
+            <span aria-hidden="true">📧</span> E-mail:
+            <a href="mailto:personalizadoscanecas47@gmail.com" aria-label="Enviar e-mail para personalizadoscanecas47@gmail.com">
+                personalizadoscanecas47@gmail.com
+            </a>
         </p>
 
-    </div>
-
-    <form id="leadForm">
-
-        <div class="campo">
-
-            <label for="nome">
-                Nome completo *
-            </label>
-
-            <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Digite seu nome"
-                required>
-
+        <div>
+            <h3>Redes sociais</h3>
+            <a href="https://www.instagram.com/personalizadoscanecas47/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social"
+               aria-label="Perfil do Instagram da Arte Personalizados (abre em nova aba)">
+                <span aria-hidden="true">📸</span> Instagram
+            </a>
         </div>
 
-
-        <div class="campo">
-
-            <label for="email">
-                E-mail *
-            </label>
-
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seuemail@exemplo.com"
-                required>
-
-        </div>
-
-
-        <div class="campo">
-
-            <label for="telefone">
-                Telefone / WhatsApp *
-            </label>
-
-            <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                placeholder="(19) 99999-9999"
-                required>
-
-        </div>
-
-
-        <div class="campo">
-
-            <label for="cidade">
-                Cidade *
-            </label>
-
-            <input
-                type="text"
-                id="cidade"
-                name="cidade"
-                placeholder="Digite sua cidade"
-                required>
-
-        </div>
-
-
-        <div class="campo">
-
-            <label for="produto">
-                Qual brinde personalizado você procura? *
-            </label>
-
-            <select
-                id="produto"
-                name="produto"
-                required>
-
-                <option value="">
-                    Selecione uma opção
-                </option>
-
-                <option value="Canecas">
-                    Canecas
-                </option>
-
-                <option value="Azulejos">
-                    Azulejos
-                </option>
-
-                <option value="Squeeze / Garrafinhas">
-                    Squeeze / Garrafinhas
-                </option>
-
-                <option value="Chaveiro Acrílico">
-                    Chaveiro Acrílico
-                </option>
-
-                <option value="Chaveiro MDF">
-                    Chaveiro MDF
-                </option>
-
-                <option value="Chaveiro Plástico">
-                    Chaveiro Plástico
-                </option>
-
-                <option value="Cordão para Chaveiro">
-                    Cordão para Chaveiro
-                </option>
-
-                <option value="Ainda não decidi">
-                    Ainda não decidi
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <button
-            type="submit"
-            class="btn-formulario">
-
-            Quero receber informações
-
-        </button>
-
-        <p class="formulario-obrigatorio">
-            * Campos obrigatórios
+        <p>
+            © 2026 Arte Personalizados. Todos os direitos reservados.
         </p>
+    </footer>
 
-    </form>
+    
+    <!-- SCRIPT FIREBASE -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-</div>
-```
+        const firebaseConfig = {
+            apiKey: "AIzaSyBbAeVNgz1LGrkAgHEwNttr9h3JlSeYG2o",
+            authDomain: "brindes-arte.firebaseapp.com",
+            projectId: "brindes-arte",
+            storageBucket: "brindes-arte.firebasestorage.app",
+            messagingSenderId: "699924584237",
+            appId: "1:699924584237:web:ffa81a6ce2717a6558a5a4"
+        };
 
-</section>
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-<!-- CONTATO -->
+        document.getElementById("leadForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
 
-<footer id="contato">
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const cidade = document.getElementById("cidade").value.trim();
+            const produto = document.getElementById("produto").value;
+            const mensagemCliente = document.getElementById("mensagem").value.trim();
 
-```
-<h2>Contato</h2>
+            try {
+                // Salvar cadastro no Firestore
+                await addDoc(collection(db, "clientes"), {
+                    nome: nome,
+                    email: email,
+                    telefone: telefone,
+                    cidade: cidade,
+                    produto: produto,
+                    mensagem: mensagemCliente,
+                    dataCadastro: serverTimestamp()
+                });
 
-<p>
-    📱 WhatsApp:
-    <a
-        href="https://wa.me/5519989258023"
-        target="_blank"
-        rel="noopener noreferrer">
+                // Montar mensagem do WhatsApp
+                let textoWhatsapp =
+                    "Olá! Tenho interesse em brindes personalizados.%0A%0A" +
+                    "Nome: " + encodeURIComponent(nome) + "%0A" +
+                    "E-mail: " + encodeURIComponent(email) + "%0A" +
+                    "Telefone: " + encodeURIComponent(telefone) + "%0A" +
+                    "Cidade: " + encodeURIComponent(cidade) + "%0A" +
+                    "Produto de interesse: " + encodeURIComponent(produto);
 
-        (19) 98925-8023
+                if (mensagemCliente) {
+                    textoWhatsapp += "%0A" + "Mensagem: " + encodeURIComponent(mensagemCliente);
+                }
 
-    </a>
-</p>
+                const urlWhatsapp = "https://wa.me/5519989258023?text=" + textoWhatsapp;
 
-<p>
-    📧 personalizadoscanecas47@gmail.com
-</p>
+                // Abrir WhatsApp
+                window.open(urlWhatsapp, "_blank");
 
+                // Limpar formulário
+                document.getElementById("leadForm").reset();
+                alert("Cadastro realizado com sucesso!");
 
-<div>
-
-    <h3>Redes sociais</h3>
-
-    <a
-        href="https://www.instagram.com/personalizadoscanecas47/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social">
-
-        📸 Instagram
-
-    </a>
-
-</div>
-
-
-<p>
-    © 2026 Arte Personalizados
-</p>
-```
-
-</footer>
-
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-
-<a
- href="https://wa.me/5519989258023?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos%20personalizados."
- target="_blank"
- rel="noopener noreferrer"
- class="whatsapp-flutuante"
- aria-label="Falar pelo WhatsApp">
-
-```
-💬
-```
-
-</a>
-
-<script>
-
-document.getElementById("leadForm").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const telefone = document.getElementById("telefone").value;
-    const cidade = document.getElementById("cidade").value;
-    const produto = document.getElementById("produto").value;
-
-
-    const mensagem =
-        "Olá! Tenho interesse em brindes personalizados.%0A%0A" +
-        "Nome: " + encodeURIComponent(nome) + "%0A" +
-        "E-mail: " + encodeURIComponent(email) + "%0A" +
-        "Telefone: " + encodeURIComponent(telefone) + "%0A" +
-        "Cidade: " + encodeURIComponent(cidade) + "%0A" +
-        "Produto de interesse: " + encodeURIComponent(produto);
-
-
-    const whatsapp =
-        "https://wa.me/5519989258023?text=" + mensagem;
-
-
-    window.open(whatsapp, "_blank");
-
-});
-
-</script>
-
+            } catch (error) {
+                console.error("Erro ao salvar cadastro:", error);
+                alert("Não foi possível enviar seu cadastro. Tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>
