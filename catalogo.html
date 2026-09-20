@@ -7,7 +7,23 @@
     <meta name="description"
         content="Catálogo Arte Personalizados — canecas, squeezes, azulejos e chaveiros personalizados para presentes, empresas e eventos especiais.">
     <title>Catálogo de Produtos | Arte Personalizados</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        .whatsapp-flutuante {
+            width: max-content !important;
+            height: max-content !important;
+            background: transparent !important;
+        }
+        .whatsapp-flutuante img {
+            height: 65px !important;
+            width: auto !important;
+        }
+        @media (max-width: 900px) {
+            .whatsapp-flutuante img {
+                height: 50px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -728,7 +744,7 @@
                    rel="noopener noreferrer"
                    class="btn-whatsapp-grande"
                    aria-label="Falar pelo WhatsApp com a Arte Personalizados (abre em nova aba)">
-                    <span aria-hidden="true">💬</span> Falar pelo WhatsApp
+                    <span aria-hidden="true"></span> Falar pelo WhatsApp
                 </a>
             </div>
         </section>
@@ -775,6 +791,64 @@
     </footer>
 
    
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5519989258023?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20Arte%20Personalizados%20e%20gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="whatsapp-flutuante" aria-label="Fale conosco pelo WhatsApp">
+        <img src="img/whatsapp.png" alt="Fale conosco pelo WhatsApp">
+    </a>
+<!-- PAINEL DE ACESSIBILIDADE -->
+<div class="painel-acessibilidade">
+    <button id="btnAcessibilidadeToggle" class="btn-acessibilidade-toggle" aria-label="Abrir menu de acessibilidade">
+        ♿
+    </button>
+    <div id="menuAcessibilidade" class="menu-acessibilidade" aria-label="Opções de acessibilidade">
+        <button id="btnAumentarFonte">🔠 Aumentar Fonte</button>
+        <button id="btnContraste">🌓 Alto Contraste</button>
+        <button id="btnLerTela">🔊 Ouvir Página</button>
+    </div>
+</div>
+<script>
+    const btnToggle = document.getElementById("btnAcessibilidadeToggle");
+    const menuAcessibilidade = document.getElementById("menuAcessibilidade");
+    const btnAumentarFonte = document.getElementById("btnAumentarFonte");
+    const btnContraste = document.getElementById("btnContraste");
+    const btnLerTela = document.getElementById("btnLerTela");
+
+    // Abrir/Fechar menu de acessibilidade
+    btnToggle.addEventListener("click", () => {
+        const aberto = menuAcessibilidade.classList.toggle("ativo");
+        btnToggle.setAttribute("aria-expanded", aberto);
+    });
+
+    // Aumentar / Diminuir Fonte
+    btnAumentarFonte.addEventListener("click", () => {
+        document.body.classList.toggle("fonte-aumentada");
+        const ativo = document.body.classList.contains("fonte-aumentada");
+        btnAumentarFonte.textContent = ativo ? "🔠 Reduzir Fonte" : "🔠 Aumentar Fonte";
+    });
+
+    // Alternar Alto Contraste
+    btnContraste.addEventListener("click", () => {
+        document.body.classList.toggle("alto-contraste");
+    });
+
+    // Leitor de Tela Simples (Texto para Voz nativo do navegador)
+    btnLerTela.addEventListener("click", () => {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel(); // Para qualquer leitura anterior
+            
+            // Pega o conteúdo principal da página
+            const conteudoPrincipal = document.getElementById("conteudo-principal").innerText;
+            const utterance = new SpeechSynthesisUtterance(conteudoPrincipal);
+            utterance.lang = 'pt-BR';
+            utterance.rate = 1.0; // Velocidade da fala
+            
+            window.speechSynthesis.speak(utterance);
+            alert("Iniciando leitura da página. Para interromper, feche a aba ou recarregue.");
+        } else {
+            alert("Seu navegador não suporta recursos de voz.");
+        }
+    });
+</script>
 </body>
 
 </html>

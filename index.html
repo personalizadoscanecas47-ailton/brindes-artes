@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Arte Personalizados — Canecas, squeezes, azulejos e chaveiros personalizados com carinho e qualidade para todas as ocasiões.">
     <title>Arte Personalizados — Presentes e Brindes Personalizados</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        .whatsapp-flutuante {
+            width: max-content !important;
+            height: max-content !important;
+            background: transparent !important;
+        }
+        .whatsapp-flutuante img {
+            height: 65px !important;
+            width: auto !important;
+        }
+        @media (max-width: 900px) {
+            .whatsapp-flutuante img {
+                height: 50px !important;
+            }
+        }
+    </style>
 </head>
-
 <body>
     <!-- LINK PARA PULAR PARA O CONTEÚDO PRINCIPAL (ACESSIBILIDADE VIA TECLADO) -->
     <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
@@ -23,7 +38,11 @@
             </div>
         </div>
 
-        <nav aria-label="Navegação principal">
+        <button id="btnMenuToggle" class="menu-toggle" aria-label="Alternar menu" aria-expanded="false">
+            &#9776;
+        </button>
+
+        <nav id="menuPrincipal" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a>
             <a href="#canecas">Canecas</a>
             <a href="#squeeze">Squeeze</a>
@@ -361,78 +380,164 @@
         </p>
     </footer>
 
-    
-    <!-- SCRIPT FIREBASE -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import {
-            getFirestore,
-            collection,
-            addDoc,
-            serverTimestamp
-        } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5519989258023?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20brindes%20personalizados." target="_blank" rel="noopener noreferrer" class="whatsapp-flutuante" aria-label="Fale conosco pelo WhatsApp">
+        <img src="img/whatsapp.png" alt="Fale conosco pelo WhatsApp">
+    </a>
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBbAeVNgz1LGrkAgHEwNttr9h3JlSeYG2o",
-            authDomain: "brindes-arte.firebaseapp.com",
-            projectId: "brindes-arte",
-            storageBucket: "brindes-arte.firebasestorage.app",
-            messagingSenderId: "699924584237",
-            appId: "1:699924584237:web:ffa81a6ce2717a6558a5a4"
-        };
+    <!-- PAINEL DE ACESSIBILIDADE -->
+    <div class="painel-acessibilidade">
+        <button id="btnAcessibilidadeToggle" class="btn-acessibilidade-toggle" aria-label="Abrir menu de acessibilidade">
+            <img src="img/acessibilidade.png" alt="">
+        </button>
+        <div id="menuAcessibilidade" class="menu-acessibilidade" aria-label="Opções de acessibilidade">
+            <button id="btnAumentarFonte">🔠 Aumentar Fonte</button>
+            <button id="btnContraste">🌓 Alto Contraste</button>
+            <button id="btnLerTela">🔊 Ouvir Página</button>
+        </div>
+    </div>
+    <script>
+        const btnToggle = document.getElementById("btnAcessibilidadeToggle");
+        const menuAcessibilidade = document.getElementById("menuAcessibilidade");
+        const btnAumentarFonte = document.getElementById("btnAumentarFonte");
+        const btnContraste = document.getElementById("btnContraste");
+        const btnLerTela = document.getElementById("btnLerTela");
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        // Abrir/Fechar menu de acessibilidade
+        btnToggle.addEventListener("click", () => {
+            const aberto = menuAcessibilidade.classList.toggle("ativo");
+            btnToggle.setAttribute("aria-expanded", aberto);
+        });
 
-        document.getElementById("leadForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
+        // Menu responsivo
+        const btnMenuToggle = document.getElementById("btnMenuToggle");
+        const menuPrincipal = document.getElementById("menuPrincipal");
 
-            const nome = document.getElementById("nome").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const telefone = document.getElementById("telefone").value.trim();
-            const cidade = document.getElementById("cidade").value.trim();
-            const produto = document.getElementById("produto").value;
-            const mensagemCliente = document.getElementById("mensagem").value.trim();
-
-            try {
-                // Salvar cadastro no Firestore
-                await addDoc(collection(db, "clientes"), {
-                    nome: nome,
-                    email: email,
-                    telefone: telefone,
-                    cidade: cidade,
-                    produto: produto,
-                    mensagem: mensagemCliente,
-                    dataCadastro: serverTimestamp()
+        if(btnMenuToggle && menuPrincipal) {
+            btnMenuToggle.addEventListener("click", () => {
+                menuPrincipal.classList.toggle("ativo");
+                const aberto = menuPrincipal.classList.contains("ativo");
+                btnMenuToggle.setAttribute("aria-expanded", aberto);
+            });
+            
+            // Fechar menu ao clicar em um link
+            const linksMenu = menuPrincipal.querySelectorAll("a");
+            linksMenu.forEach(link => {
+                link.addEventListener("click", () => {
+                    menuPrincipal.classList.remove("ativo");
+                    btnMenuToggle.setAttribute("aria-expanded", "false");
                 });
+            });
+        }
 
-                // Montar mensagem do WhatsApp
-                let textoWhatsapp =
-                    "Olá! Tenho interesse em brindes personalizados.%0A%0A" +
-                    "Nome: " + encodeURIComponent(nome) + "%0A" +
-                    "E-mail: " + encodeURIComponent(email) + "%0A" +
-                    "Telefone: " + encodeURIComponent(telefone) + "%0A" +
-                    "Cidade: " + encodeURIComponent(cidade) + "%0A" +
-                    "Produto de interesse: " + encodeURIComponent(produto);
+        // Aumentar / Diminuir Fonte
+        btnAumentarFonte.addEventListener("click", () => {
+            document.body.classList.toggle("fonte-aumentada");
+            const ativo = document.body.classList.contains("fonte-aumentada");
+            btnAumentarFonte.textContent = ativo ? "🔠 Reduzir Fonte" : "🔠 Aumentar Fonte";
+        });
 
-                if (mensagemCliente) {
-                    textoWhatsapp += "%0A" + "Mensagem: " + encodeURIComponent(mensagemCliente);
-                }
+        // Alternar Alto Contraste
+        btnContraste.addEventListener("click", () => {
+            document.body.classList.toggle("alto-contraste");
+        });
 
-                const urlWhatsapp = "https://wa.me/5519989258023?text=" + textoWhatsapp;
-
-                // Abrir WhatsApp
-                window.open(urlWhatsapp, "_blank");
-
-                // Limpar formulário
-                document.getElementById("leadForm").reset();
-                alert("Cadastro realizado com sucesso!");
-
-            } catch (error) {
-                console.error("Erro ao salvar cadastro:", error);
-                alert("Não foi possível enviar seu cadastro. Tente novamente.");
+        // Leitor de Tela Simples (Texto para Voz nativo do navegador)
+        btnLerTela.addEventListener("click", () => {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // Para qualquer leitura anterior
+                
+                // Pega o conteúdo principal da página
+                const conteudoPrincipal = document.getElementById("conteudo-principal").innerText;
+                const utterance = new SpeechSynthesisUtterance(conteudoPrincipal);
+                utterance.lang = 'pt-BR';
+                utterance.rate = 1.0; // Velocidade da fala
+                
+                window.speechSynthesis.speak(utterance);
+                alert("Iniciando leitura da página. Para interromper, feche a aba ou recarregue.");
+            } else {
+                alert("Seu navegador não suporta recursos de voz.");
             }
         });
     </script>
+
+    <!-- SCRIPT FIREBASE -->
+<script type="module">
+    import {
+        collection,
+        addDoc,
+        serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+    import { db } from "./firebase-config.js";
+
+    const formulario = document.getElementById("leadForm");
+
+    formulario.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const cidade = document.getElementById("cidade").value.trim();
+        const produto = document.getElementById("produto").value;
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        const botao = formulario.querySelector("button[type='submit']");
+
+        botao.disabled = true;
+        botao.textContent = "Enviando...";
+
+        try {
+            // Salva o cliente no Firestore
+            await addDoc(collection(db, "clientes"), {
+                nome: nome,
+                email: email,
+                telefone: telefone,
+                cidade: cidade,
+                produto: produto,
+                mensagem: mensagem,
+                dataCadastro: serverTimestamp()
+            });
+
+            // Monta a mensagem para o WhatsApp
+            let textoWhatsapp =
+                "Olá! Tenho interesse em brindes personalizados.\n\n" +
+                "Nome: " + nome + "\n" +
+                "E-mail: " + email + "\n" +
+                "Telefone: " + telefone + "\n" +
+                "Cidade: " + cidade + "\n" +
+                "Produto de interesse: " + produto;
+
+            if (mensagem) {
+                textoWhatsapp += "\nMensagem: " + mensagem;
+            }
+
+            const urlWhatsapp =
+                "https://wa.me/5519989258023?text=" +
+                encodeURIComponent(textoWhatsapp);
+
+            // Abre o WhatsApp depois de salvar no Firestore
+            window.open(urlWhatsapp, "_blank");
+
+            formulario.reset();
+
+            alert("Cadastro realizado com sucesso!");
+
+        } catch (error) {
+            console.error("Erro ao salvar cadastro:", error);
+
+            alert(
+                "Não foi possível enviar seu cadastro. " +
+                "Verifique sua conexão e tente novamente."
+            );
+
+        } finally {
+            botao.disabled = false;
+            botao.textContent = "Quero receber informações";
+        }
+    });
+</script>
+
 </body>
 </html>
